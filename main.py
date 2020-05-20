@@ -50,23 +50,78 @@ if __name__ == '__main__':
     # Assign a new column with the array_ranks data extracted above.
     kdf_meta['sales_rank_sports_etc'] = array_ranks
 
+    # Compute join on asin attribute.
+    kdf_merge = kdf_reviews.merge(kdf_meta, on='asin', how='left')
+
     # Query 1
     kdf_1 = kdf_reviews \
         .groupby('asin') \
         .size() \
-        .sort_values(ascending=False) \
-        .head(100)
+        .sort_values(ascending=False)
 
     print("# I 100 prodotti con il maggior numero di recensioni #")
-    print(kdf_1)
+    print(kdf_1.head(100))
 
     # Query #2
     kdf_2 = kdf_reviews \
         .groupby('reviewerID') \
         .size() \
-        .sort_values(ascending=False) \
-        .head(100)
+        .sort_values(ascending=False)
 
     print("# I 100 reviewer che hanno effettuato il maggior numero di recensioni #")
-    print(kdf_2)
+    print(kdf_2.head(100))
 
+    # Query #3
+    kdf_3 =  kdf_merge \
+        [kdf_merge.brand != ''] \
+        .dropna(subset=['brand']) \
+        .groupby('brand') \
+        .size() \
+        .sort_values(ascending=False)
+
+    print("# Le 50 marche i cui prodotti sono stati maggiormente recensiti #")
+    print(kdf_3.head(50))
+
+    # Query #4
+    kdf_4 =  kdf_meta \
+        .dropna(subset=['brand', 'price']) \
+        .groupby('brand') \
+        ['price'] \
+        .mean() \
+        .sort_values(ascending=False)
+
+    print("# Le 50 marche i cui prodotti hanno un prezzo medio maggiore #")
+    print(kdf_4.head(50))
+    
+    # Query #5
+    kdf_5 = kdf_reviews \
+        .groupby('asin') \
+        ['overall'] \
+        .mean() \
+        .sort_values(ascending=False)
+
+    kdf_5 = ks.concat([kdf_1, kdf_5], axis=1)
+
+    kdf_5 = kdf_5 \
+        .sort_values(by=['overall', 'count'], ascending=False)
+
+    print("# I 100 prodotti con le migliori recensioni #")
+    print(kdf_5.head(100))
+
+    # Query #6
+    kdf_6 = kdf_merge \
+        [kdf_merge.brand != ''] \
+        .dropna(subset=['brand']) \
+        .groupby('brand') \
+        ['overall'] \
+        .mean() \
+        .sort_values(ascending=False)
+
+    kdf_6 = ks.concat([kdf_3, kdf_6], axis=1)
+
+    kdf_6 = kdf_6 \
+        .sort_values(by=['overall', 'count'], ascending=False)
+
+    print("# Le 100 marche con le migliori recensioni #")
+    print(kdf_6.head(50))
+    
