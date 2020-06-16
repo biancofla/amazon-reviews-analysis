@@ -8,5 +8,5 @@ Il codice eseguibile è contenuto interamente nel file `notebook_main.ipynb`.
 - **`csv:`** file csv contenenti i risultati delle query
 - **`figs:`** grafici e immagini utili per la rappresentazione dei dati
 - **`pdf:`** file pdf generati da Tableau
-- **`tableau:`** file con estensione Tableau
+- **`tableau:`** file Tableau
 - **`notebook_main.ipynb:`** file contenente il codice sorgente da eseguire
