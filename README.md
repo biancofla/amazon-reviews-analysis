@@ -1,6 +1,6 @@
 # Elaborato progettuale Big Data 2019 / 2020 - Gruppo A
 
-Il codice eseguibile è contenuto interamente nel file notebook_main.ipynb. 
+Il codice eseguibile è contenuto interamente nel file `notebook_main.ipynb`. 
 
 ### Struttura progetto
 
