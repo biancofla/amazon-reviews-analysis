@@ -13,7 +13,11 @@ Il codice eseguibile è contenuto interamente nel file `notebook_main.ipynb`.
 
 ### Membri del progetto
 Flavio Biancospino
+
 Andrea D'Acunto
+
 Vincenzo Russo
+
 Rocchina Valanzano
+
 Cristian Zampino
