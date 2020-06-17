@@ -10,3 +10,10 @@ Il codice eseguibile è contenuto interamente nel file `notebook_main.ipynb`.
 - **`pdf:`** file pdf generati da Tableau
 - **`tableau:`** file Tableau
 - **`notebook_main.ipynb:`** file contenente il codice sorgente da eseguire
+
+### Membri del progetto
+Flavio Biancospino
+Andrea D'Acunto
+Vincenzo Russo
+Rocchina Valanzano
+Cristian Zampino
