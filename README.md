@@ -12,12 +12,9 @@ Il codice eseguibile è contenuto interamente nel file `notebook_main.ipynb`.
 - **`notebook_main.ipynb:`** file contenente il codice sorgente da eseguire
 
 ### Membri del progetto
-Flavio Biancospino
 
-Andrea D'Acunto
-
-Vincenzo Russo
-
-Rocchina Valanzano
-
-Cristian Zampino
+- Flavio Biancospino
+- Andrea D'Acunto
+- Vincenzo Russo
+- Rocchina Valanzano
+- Cristian Zampino
