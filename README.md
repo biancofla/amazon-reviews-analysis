@@ -13,6 +13,9 @@ Le collezioni JSON sono hostate su MongoDB e non c'è quindi bisogno che risieda
 - **`tableau:`** file Tableau
 - **`notebook_main.ipynb:`** file contenente il codice sorgente da eseguire
 
+### Presentazione progetto
+Google presentazioni: https://docs.google.com/presentation/d/1XQxhIk6eSzsmwkgtoiI4YFYOjudSn_1kXUZcBq-YEto/edit?usp=sharing
+
 ### Membri del progetto
 
 - Flavio Biancospino
