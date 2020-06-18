@@ -2,6 +2,8 @@
 
 Il codice eseguibile è contenuto interamente nel file `notebook_main.ipynb`. 
 
+Le collezioni JSON sono hostate su MongoDB e non c'è quindi bisogno che risiedano fisicamente sul pc. Di default, l'analisi viene eseguita sulle collezioni JSON più grandi.
+
 ### Struttura progetto
 
 - **`util:`** script di utilità
